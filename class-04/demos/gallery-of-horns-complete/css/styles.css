@@ -1,0 +1,136 @@
+body {
+  font-family: 'Amatic SC', cursive;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
+  font-size: 8vw;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  border: 1.5px solid #888;
+  box-shadow: 3px 3px #888;
+  margin: 0px auto;
+}
+
+p {
+  display: none;
+}
+
+form {
+  text-align: center;
+  font-size: 35px;
+}
+
+input[type="radio"] {
+  height: 25px;
+  margin: 20px 0 25px 40px;
+}
+
+select {
+  margin: 0px auto;
+  display: block;
+  height: 3vw;
+  font-size: 15px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+  font-size: 30px;
+  background-color: #eee;
+  padding: 4px;
+  border-radius: 5px
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+footer {
+  clear: both;
+  font-size: 30px;
+  margin-left: 20px;
+  height: 40px;
+  position: fixed;
+  bottom: 0px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+section.active {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+section.active img {
+  height: 400px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  z-index: 200;
+}
+
+section.active p {
+  background: #f5f5f5;
+  color: #111;
+  display: block !important;
+  left: 0;
+  margin: auto;
+  padding: .5em 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: calc(50% + 200px);
+  transform: translateY(-50%);
+  width: 400px;
+  z-index: 200;
+}
+
+section.active h2 {
+  display: none;
+}
+
+section.active:after {
+  background: #000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: '&nbsp;';
+  opacity: .6;
+  position: absolute;
+  z-index: 100;
+}

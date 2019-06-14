@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Gallery of Horns</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Handlebars template for photos -->
+    <script id="photo-template" type="text/x-handlebars-template">
+      <div class="{{ keyword }}">
+        <h2>{{ title }}</h2>
+        <img src="{{ image_url }}" alt="" />
+        <p>{{ description }}</p>
+      </div>
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <h1>The Gallery of Horns</h1>
+      <form>
+        <input type="radio" name="sort" id="title" checked="checked">
+        <label for="title">Sort by Title</label>
+        <input type="radio" name="sort" id="horns">
+        <label for="horns">Sort by Number of Horns</label>
+      </form>
+      <select>
+        <option value="default">Filter by Keyword</option>
+      </select>
+      <ul>
+        <li id="1">Page 1</li>
+        <li id="2">Page 2</li>
+      </ul>
+    </header>
+    <section></section>
+    <main id="image-container">
+    </main>
+    <footer>
+      <ul>
+        <li id="2">Page 1</li>
+        <li id="1">Page 2</li>
+      </ul>
+      <p>&copy; 2018 Code Fellows</p>
+    </footer>
+
+    <!-- CDNs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
