@@ -15,7 +15,7 @@ We'll start out by looking at a quick deployment using the Heroku platform.  Thi
 ## Learning Objectives
 As a result of completing lecture 5 of Code 301, students will:
 - Be able to deploy a website to AWS Elastic Beanstalk
-- Be able to deploy a website to Heroku and understand the key commonalities and differences between that plaform and AWS
-- Be able to create a simple NodeJS/ExpressJS server that will serve a static `index.html` file
+- Be able to deploy a website to Heroku and understand commonalities and differences between Heroku and AWS
+- Be able to create a simple NodeJS/ExpressJS server that will serve up a static `index.html` file
 
 
