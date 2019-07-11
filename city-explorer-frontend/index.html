@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>City Explorer</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Muli" rel="stylesheet">
+
+  <!-- Template for errors -->
+  <script type="text/x-handlebars-template" id="error-template">
+    <p> {{ responseText }}</p>
+  </script>
+
+  <!-- Template for age of data-->
+  <script type="text/x-handlebars-template" id="time-template">
+    <p>{{ date-age }}</p>
+  </script>
+
+  <!-- Template for weather data -->
+  <script type="text/x-handlebars-template" id="weather-results-template">
+    <li>
+      The forecast for {{ time }} is: {{ forecast }}
+    </li>
+  </script>
+
+  <!-- Template for Yelp data -->
+  <script type="text/x-handlebars-template" id="yelp-results-template">
+    <li>
+      <a href="{{ url }}">{{ name }}</a>
+      <p>The average rating is {{ rating }} out of 5 and the average cost is {{ price }} out of 4</p>
+      <img src="{{ image_url }}">
+    </li>
+  </script>
+
+  <!-- Template for Eventbrite data -->
+  <script type="text/x-handlebars-template" id="events-results-template">
+    <li>
+      <a href="{{ link }}">{{ name }}</a>
+      <p>Event Date: {{ event_date }}</p>
+      <p>{{ summary }}</p>
+    </li>
+  </script>
+
+  <!-- Template for movie data -->
+  <script type="text/x-handlebars-template" id="movies-results-template">
+    <li>
+      <p><span>{{ title }}</span> was relased on {{ released_on }}. Out of {{ total_votes }} total votes, {{title}} has an average vote of {{ average_votes }} and a popularity score of {{ popularity }}.</p>
+      <img src="{{ image_url }}">
+      <p>{{ overview }}</p>
+    </li>
+  </script>
+
+  <!-- Template for trail data -->
+  <script type="text/x-handlebars-template" id="trails-results-template">
+    <li>
+      <p>Hike Name: <a href="{{ trail_url }}">{{ name }}</a>, Location: {{ location }}, Distance: {{ length }} miles</p>
+      <p>On {{ condition_date }} at {{ condition_time }}, trail conditions were reported as: {{ conditions }}</p>
+      <p>This trail has a rating of {{ stars }} stars (out of {{ star_votes }} votes)</p>
+      <p>{{ summary }}</p>
+    </li>
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>City Explorer</h1>
+    <p>Enter a location below to learn about the weather, events, restaurants, movies, and more!</p>
+  </header>
+  <main>
+    <form id="url-form">
+      <label>Enter the URL to your deployed back end, making sure to remove the trailing forward slash</label>
+      <input type="text" id="back-end-url">
+    </form>
+
+    <form id="geocode-form">
+      <label>Enter your Geocoding API Key:</label>
+      <input type="text" id="api-key">
+    </form>
+
+    <form id="search-form" class="hide">
+      <label for="search">Search for a location</label>
+      <input type="text" name="search" id="input-search" placeholder="Enter a location here">
+      <button type="submit">Explore!</button>
+    </form>
+    <img id="map" class="hide" src="" alt="Map of search query">
+    <h2 class="query-placeholder"></h2>
+
+    <!-- Section for error message -->
+    <section class="error-container"></section>
+
+    <div class="column-container hide">
+      <!-- Section for weather data -->
+      <section>
+        <h3>Results from the Dark Sky API</h3>
+        <ul class="weather-results"></ul>
+      </section>
+
+      <!-- Section for Yelp data -->
+      <section class="yelp-container">
+        <h3>Results from the Yelp API</h3>
+        <ul class="yelp-results">
+        </ul>
+      </section>
+
+      <!-- Section for Eventbrite data -->
+      <section>
+        <h3>Results from the Eventbrite API</h3>
+        <ul class="events-results"></ul>
+      </section>
+
+      <!-- Section for movie data -->
+      <section class="movie-container">
+        <h3>Results from The Movie DB API</h3>
+        <ul class="movies-results"></ul>
+      </section>
+
+      <!-- Section for trails data -->
+      <section>
+        <h3>Results from the Hiking Project API</h3>
+        <ul class="trails-results"></ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
