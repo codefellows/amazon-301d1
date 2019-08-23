@@ -1,3 +1,7 @@
+'use strict';
+
+console.log('great');
+
 let state = {};
 
 let button = document.getElementById('btn');
