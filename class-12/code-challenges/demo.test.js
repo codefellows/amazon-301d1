@@ -133,6 +133,22 @@ let findShortest = (data) => {
 
 };
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE divisiblebyfivetwotothepower
+
+Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
+
+This function should first remove any elements that are not numbers or are not divisible by five.
+
+This function should then raise 2 to the power of the resulting numbers, returning an array of arrays.
+
+For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
+------------------------------------------------------------------------------------------------ */
+
+const divisibleByFiveTwoToThePower = (input) => {
+  // Solution code here...
+};
+
 
 // =========================================================
 
@@ -188,10 +204,24 @@ describe('Testing challenge Even Odd', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+describe('Testing challenge shortest', () => {
   test('It should return the name of the shortest character', () => {
     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });
 });
 
+
+describe('Testing challenge fivetotwothepower', () => {
+  test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
+    expect(divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]])).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
+  });
+
+  test('It should return an empty array if none of the numbers are divisible by five', () => {
+    expect(divisibleByFiveTwoToThePower([[1, 2, 3], [5, 10, 15]])).toStrictEqual([[], [32, 1024, 32768]]);
+  });
+
+  test('It should return an empty array if the values are not numbers', () => {
+    expect(divisibleByFiveTwoToThePower([['one', 'two', 'five'], ['5', '10', '15'], [5]])).toStrictEqual([[], [], [32]]);
+  });
+});
 
