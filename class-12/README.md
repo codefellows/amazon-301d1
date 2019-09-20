@@ -1,5 +1,10 @@
 # Routing and Component Composition
 
+## Lecture Notes
+
+  - [2D Array Practice](https://repl.it/@ncarignan/401d1-battleship)
+  - [Sort Practice](https://repl.it/@ncarignan/401d1-sort-meetings)
+
 ## Learning Objectives
 
 **Students will be able to ...**
