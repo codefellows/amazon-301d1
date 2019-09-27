@@ -1,0 +1,49 @@
+.task-app {
+  margin-top: 6.75vw;
+}
+
+.task-form {
+  background: $primary-color / 2;
+  padding: $gutter-sm;
+}
+
+.task-list {
+  padding: $gutter-sm;
+  min-height: 100vh;
+
+  li {
+    margin-bottom: 1vw;
+    padding: $gutter-sm;
+    font-size: 2vw;
+    background: $secondary-color;
+    color: $black;
+    border-radius: $border-radius;
+    overflow: scroll;
+
+    p {
+      &:first-child {
+        margin-bottom: 1.5vw;
+      }
+
+      span {
+        &:first-child {
+          color: $white;
+        }
+      }
+    }
+  
+
+    span {
+      color: $pink;
+      display: inline-block;
+      font-style: italic;
+      line-height: 1vw;
+      margin-right: 2vw;
+    
+      &:first-child {
+        width: 7vw;
+        font-style: normal;
+      }
+    }
+  }
+}

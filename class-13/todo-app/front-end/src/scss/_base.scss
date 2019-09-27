@@ -1,0 +1,54 @@
+* {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+h1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: $gutter-sm;
+  font-weight: bold;
+  background: $grey;
+  color: $special-grey;
+}
+
+button {
+  font-size: $font-size / 2;
+  padding: $gutter-sm 5vw;
+  background: $green;
+  color: $white;
+  border: none;
+  border-radius: $border-radius;
+  transition: $btn-trans;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .75;
+  }
+}
+
+input[type="text"] {
+  display: block;
+  width: 50%;
+  font-size: $font-size / 2;
+  margin: $gutter-sm 0;
+  padding: 1vw;
+  border: solid 1px $black;
+  border-radius: $border-radius;
+
+  &:focus {
+    background: $black;
+    color: $pink;
+  }
+}
+
+textarea {
+  @extend input[type="text"];
+  height: 12vw;
+}
+
+footer {
+  height: 10vw;
+  background: $pink;
+}
